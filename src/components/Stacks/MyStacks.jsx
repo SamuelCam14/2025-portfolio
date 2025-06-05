@@ -6,17 +6,17 @@ import "./myStacks.css";
 
 export const MyStacks = () => {
   return (
-    <div className="flex flex-col w-full h-full items-center text-center p-5">
+    <div className="flex flex-col w-full h-full items-center text-center py-5 px-8">
       <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
-          <HiSquare2Stack className="h-5 w-5 text-orange-400/70" />
+          <HiSquare2Stack className="h-5 w-5 text-rose-300/90" />
           <h2 className="text-zinc-400">My Stacks</h2>
         </div>
-        <p className="text-zinc-200 font-medium text-xl">Tech Arsenal</p>
+        <p className="text-zinc-200 font-medium text-xl mt-1">Tech Arsenal</p>
       </div>
 
-      <div className="flex flex-col gap-2 h-full justify-center w-full">
-        <ul className="flex w-full gap-2">
+      <div className="flex flex-col gap-2.5 h-full justify-center w-full">
+        <ul className="flex w-full gap-2.5">
           <li className="stacks-card">
             <div className="icon-container">
               <FaReact className="stacks-icon" />
@@ -30,7 +30,7 @@ export const MyStacks = () => {
             TailwindCSS
           </li>
         </ul>
-        <ul className="flex w-full gap-2">
+        <ul className="flex w-full gap-2.5">
           <li className="stacks-card">
             <div className="icon-container">
               <AiOutlineJavaScript className="stacks-icon" />
