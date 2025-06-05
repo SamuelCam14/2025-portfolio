@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@utility stacks-card {
+    @apply text-zinc-300 font-medium col-span-1 row-span-1 flex items-center gap-2 bg-zinc-800/50 p-2 rounded-xl border-1 border-zinc-800/80 flex-1/2;
+}
+
+@utility stacks-icon {
+    @apply h-6 w-6;
+}
+
+@utility icon-container {
+    @apply bg-zinc-700/30 p-2 rounded-lg;
+}

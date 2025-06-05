@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@utility first-col {
+    @apply col-span-3 row-span-4;
+}
+
+@utility bento {
+    @apply rounded-3xl bg-zinc-900/60 min-h-full min-w-full border-zinc-800/50 border-1;
+}
