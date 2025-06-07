@@ -1,26 +1,50 @@
 import { BsFillFolderFill } from "react-icons/bs";
 import { useEffect, useRef } from "react";
+import {
+  TbCodeDots,
+  TbColorSwatch,
+  TbDatabaseSearch,
+  TbSeo,
+  TbDeviceAnalytics,
+  TbBrandMeta,
+} from "react-icons/tb";
+import "./solutionSuite.css";
 
 const solutions = [
-  { name: "Web Development", image: "/images/dreamhigh.png" },
-  { name: "React Frontend", image: "/images/NbaKronz.png" },
-  { name: "Node Backend", image: "/images/skull.png" },
+  { name: "Web Development", icon: <TbCodeDots /> },
+  { name: "React Frontend", icon: <TbColorSwatch /> },
+  { name: "Node Backend", icon: <TbDatabaseSearch /> },
+];
+
+const additionalSolutions = [
+  { name: "SEO Optimization", icon: <TbSeo /> },
+  { name: "Analytics Integration", icon: <TbDeviceAnalytics /> },
+  { name: "Social Media Marketing", icon: <TbBrandMeta /> },
 ];
 
 export const SolutionSuite = () => {
   const logosRef = useRef(null);
+  const additionalLogosRef = useRef(null);
 
   useEffect(() => {
+    // Setup first scroll
     const ul = logosRef.current;
     if (ul) {
       ul.insertAdjacentHTML("afterend", ul.outerHTML);
       ul.nextSibling.setAttribute("aria-hidden", "true");
     }
+
+    // Setup second scroll
+    const additionalUl = additionalLogosRef.current;
+    if (additionalUl) {
+      additionalUl.insertAdjacentHTML("afterend", additionalUl.outerHTML);
+      additionalUl.nextSibling.setAttribute("aria-hidden", "true");
+    }
   }, []);
 
   return (
-    <div className="flex flex-col w-full h-full items-center text-center py-5 px-0 relative">
-      <div className="h-fit mb-8">
+    <div className="flex flex-col w-full h-full items-center text-center py-5 px-0">
+      <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
           <BsFillFolderFill className="h-5 w-5 text-rose-300/90" />
           <h2 className="text-zinc-400">Services</h2>
@@ -30,26 +54,40 @@ export const SolutionSuite = () => {
         </p>
       </div>
 
-      <div className="w-full inline-flex flex-nowrap overflow-hidden">
-        <ul
-          ref={logosRef}
-          className="flex items-center justify-center md:justify-start [&_li]:mx-1 [&_img]:max-w-none animate-[infinite-scroll_20s_linear_infinite]"
-        >
-          {solutions.map((solution) => (
-            <li key={solution.name}>
-              <img
-                src={solution.image}
-                alt={solution.name}
-                className="h-30 w-56 object-cover rounded-2xl"
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="bg-zinc-800 rounded-2xl p-1.5 absolute bottom-5">
-        <button className="bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium px-12 py-3 rounded-xl">
-          View Works
-        </button>
+      <div className="h-full w-full flex flex-col items-center justify-center">
+        {/* First scroll - opposite direction */}
+        <div className="w-full inline-flex flex-nowrap overflow-hidden mb-3">
+          <ul
+            ref={additionalLogosRef}
+            className="flex items-center justify-center md:justify-start [&_li]:mx-1.5 [&_img]:max-w-none [animation:var(--animate-infinite-scroll-reverse)]"
+          >
+            {additionalSolutions.map((solution) => (
+              <li key={solution.name} className="solution-suite">
+                <span className="text-rose-300/90 text-xl">
+                  {solution.icon}
+                </span>
+                <span className="text-zinc-200">{solution.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Second scroll - original direction */}
+        <div className="w-full inline-flex flex-nowrap overflow-hidden">
+          <ul
+            ref={logosRef}
+            className="flex items-center justify-center md:justify-start [&_li]:mx-1.5 [&_img]:max-w-none [animation:var(--animate-infinite-scroll)]"
+          >
+            {solutions.map((solution) => (
+              <li key={solution.name} className="solution-suite">
+                <span className="text-rose-300/90 text-xl">
+                  {solution.icon}
+                </span>
+                <span className="text-zinc-200">{solution.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { Projects } from "../components/Projects/Projects";
+import { SolutionSuite } from "../components/Solutions/SolutionSuite";
 import { MyStacks } from "../components/Stacks/MyStacks";
 
 export const Home = () => {
@@ -13,7 +14,9 @@ export const Home = () => {
           <div className="first-col bento">
             <Projects />
           </div>
-          <div className="first-col bento"></div>
+          <div className="first-col bento">
+            <SolutionSuite />
+          </div>
         </div>
 
         {/* Skills - Medium */}
