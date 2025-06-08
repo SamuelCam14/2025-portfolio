@@ -7,6 +7,7 @@ import {
   TbSeo,
   TbDeviceAnalytics,
   TbBrandMeta,
+  TbShoppingBag,
 } from "react-icons/tb";
 import "./solutionSuite.css";
 
@@ -20,6 +21,7 @@ const additionalSolutions = [
   { name: "SEO Optimization", icon: <TbSeo /> },
   { name: "Analytics Integration", icon: <TbDeviceAnalytics /> },
   { name: "Social Media Marketing", icon: <TbBrandMeta /> },
+  { name: "eCommerce", icon: <TbShoppingBag /> },
 ];
 
 export const SolutionSuite = () => {
