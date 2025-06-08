@@ -1,3 +1,4 @@
+import { AboutMe } from "../components/AboutMe/AboutMe";
 import { Projects } from "../components/Projects/Projects";
 import { SolutionSuite } from "../components/Solutions/SolutionSuite";
 import { MyStacks } from "../components/Stacks/MyStacks";
@@ -20,28 +21,11 @@ export const Home = () => {
         </div>
 
         {/* Skills - Medium */}
-        <div className="col-span-4 row-span-12 bg-zinc-800 rounded-2xl p-6 border border-zinc-700">
-          <h2 className="text-2xl font-semibold text-white mb-4">Skills</h2>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              React
-            </div>
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              Node.js
-            </div>
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              TypeScript
-            </div>
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              Python
-            </div>
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              MongoDB
-            </div>
-            <div className="bg-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200">
-              AWS
-            </div>
+        <div className="col-span-4 row-span-12 grid grid-cols-3 grid-rows-12 gap-4">
+          <div className="col-span-3 row-span-6 bento">
+            <AboutMe />
           </div>
+          <div className="col-span-3 row-span-6 bento"></div>
         </div>
 
         {/* Profile Image - Small */}

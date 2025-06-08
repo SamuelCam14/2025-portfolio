@@ -12,6 +12,7 @@
 @theme inline {
     --animate-infinite-scroll: infinite-scroll 25s linear infinite;
     --animate-infinite-scroll-reverse: infinite-scroll-reverse 25s linear infinite;
+    --animate-shine: shine 5s linear infinite;
 
     @keyframes infinite-scroll {
         from {
@@ -30,6 +31,16 @@
 
         to {
             transform: translateX(0);
+        }
+    }
+
+    @keyframes shine {
+        0% {
+            background-position: 100%;
+        }
+
+        100% {
+            background-position: -100%;
         }
     }
 }
