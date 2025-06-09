@@ -41,7 +41,7 @@ export const AboutMe = () => {
             className="w-32 h-34 rounded-2xl object-cover"
           />
           <div className="flex flex-col gap-2">
-            <p className="bg-zinc-800/50 text-zinc-300 flex items-center w-fit gap-2 px-4 py-1 rounded-2xl border-1 border-zinc-800/80 text-sm font-medium">
+            <p className="bg-zinc-800/50 text-zinc-400 flex items-center w-fit gap-2 px-4 py-1 rounded-2xl border-1 border-zinc-800/80 text-base font-normal">
               <FaDotCircle className="text-green-500" />
               Available To Work
             </p>
