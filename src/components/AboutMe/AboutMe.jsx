@@ -9,8 +9,9 @@ import {
   TbBrandWhatsapp,
   TbBrandGithub,
 } from "react-icons/tb";
-import { ShinyText } from "../ShinyText";
+import { ShinyText } from "../Ui/ShinyText";
 import "./aboutMe.css";
+import RotatingText from "../Ui/RotatingText";
 
 const info = [
   { name: "Chihuahua, MX", icon: <TbWorldPin className="text-rose-300/90" /> },
@@ -48,7 +49,26 @@ export const AboutMe = () => {
             <h1 className="text-3xl font-stretch-95%% font-rubik font-medium tracking-tighter">
               Samuel Camargo
             </h1>
-            <h2 className="text-zinc-400">Im a Web Developer</h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-zinc-400">Im a </h2>
+              <RotatingText
+                texts={[
+                  "Problem Solver",
+                  "Frontend Architect",
+                  "Code Crafter",
+                  "Web Developer",
+                ]}
+                mainClassName="px-2 sm:px-2 md:px-3 bg-rose-300/90 text-zinc-800 font-medium overflow-hidden py-0.5 justify-center rounded-xl"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={5000}
+              />
+            </div>
           </div>
         </div>
         <div>

@@ -19,13 +19,13 @@ export const MyStacks = () => {
         <ul className="flex w-full gap-2.5">
           <li className="stacks-card">
             <div className="icon-container">
-              <FaReact className="stacks-icon" />
+              <FaReact className="stacks-icon text-zinc-400/90" />
             </div>
             React
           </li>
           <li className="stacks-card">
             <div className="icon-container">
-              <SiTailwindcss className="stacks-icon" />
+              <SiTailwindcss className="stacks-icon text-zinc-400/90" />
             </div>
             TailwindCSS
           </li>
@@ -33,13 +33,13 @@ export const MyStacks = () => {
         <ul className="flex w-full gap-2.5">
           <li className="stacks-card">
             <div className="icon-container">
-              <AiOutlineJavaScript className="stacks-icon" />
+              <AiOutlineJavaScript className="stacks-icon text-zinc-400/90" />
             </div>
             JavaScript
           </li>
           <li className="stacks-card">
             <div className="icon-container">
-              <FaNode className="stacks-icon" />
+              <FaNode className="stacks-icon text-zinc-400/90" />
             </div>
             NodeJS
           </li>

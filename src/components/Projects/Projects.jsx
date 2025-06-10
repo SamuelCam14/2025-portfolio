@@ -1,4 +1,4 @@
-import { BsFillFolderFill } from "react-icons/bs";
+import { TbBriefcaseFilled } from "react-icons/tb";
 import { useEffect, useRef } from "react";
 
 const projects = [
@@ -22,7 +22,7 @@ export const Projects = () => {
     <div className="flex flex-col w-full h-full items-center text-center py-5 px-0 relative">
       <div className="h-fit mb-8">
         <div className="flex gap-1 items-center justify-center">
-          <BsFillFolderFill className="h-5 w-5 text-rose-300/90" />
+          <TbBriefcaseFilled className="h-5 w-5 text-rose-300/90" />
           <h2 className="text-zinc-400">Projects</h2>
         </div>
         <p className="text-zinc-200 font-medium text-xl mt-1">Works Gallery</p>

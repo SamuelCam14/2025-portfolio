@@ -1,4 +1,6 @@
 import { AboutMe } from "../components/AboutMe/AboutMe";
+import { Learning } from "../components/Learning/Learning";
+import { FollowMe } from "../components/OnlinePresence/FollowMe";
 import { Projects } from "../components/Projects/Projects";
 import { SolutionSuite } from "../components/Solutions/SolutionSuite";
 import { MyStacks } from "../components/Stacks/MyStacks";
@@ -21,11 +23,18 @@ export const Home = () => {
         </div>
 
         {/* Skills - Medium */}
-        <div className="col-span-4 row-span-12 grid grid-cols-3 grid-rows-12 gap-4">
-          <div className="col-span-3 row-span-6 bento">
+        <div className="col-span-4 row-span-12 grid grid-cols-3 grid-rows-11 gap-4">
+          <div className="col-span-3 row-span-5 bento">
             <AboutMe />
           </div>
-          <div className="col-span-3 row-span-6 bento"></div>
+          <div className="col-span-3 row-span-6 grid grid-cols-4 grid-rows-1 gap-4">
+            <div className="col-span-2 grid-rows-1 bento">
+              <FollowMe />
+            </div>
+            <div className="col-span-2 grid-rows-1 bento">
+              <Learning />
+            </div>
+          </div>
         </div>
 
         {/* Profile Image - Small */}
