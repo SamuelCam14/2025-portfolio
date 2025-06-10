@@ -2,6 +2,7 @@ import { AboutMe } from "../components/AboutMe/AboutMe";
 import { Learning } from "../components/Learning/Learning";
 import { FollowMe } from "../components/OnlinePresence/FollowMe";
 import { Projects } from "../components/Projects/Projects";
+import { School } from "../components/School/School";
 import { SolutionSuite } from "../components/Solutions/SolutionSuite";
 import { MyStacks } from "../components/Stacks/MyStacks";
 
@@ -38,9 +39,9 @@ export const Home = () => {
         </div>
 
         {/* Profile Image - Small */}
-        <div className="col-span-5 row-span-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-6 flex items-center justify-center">
-          <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-            <span className="text-2xl">👨‍💻</span>
+        <div className="col-span-5 row-span-12 grid grid-cols-5 grid-rows-12 gap-4">
+          <div className="col-span-4 row-span-5 bento">
+            <School />
           </div>
         </div>
       </div>

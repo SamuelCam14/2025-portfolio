@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@utility study-txt {
+    @apply block text-zinc-400 font-normal text-base;
+}
+
+@utility card-txt {
+    @apply text-zinc-300 text-xl;
+}
