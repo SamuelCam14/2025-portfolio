@@ -1,10 +1,13 @@
 import { AboutMe } from "../components/AboutMe/AboutMe";
+import AcademicAchievements from "../components/AcademicAchievements/AcademicAchievements";
 import { Learning } from "../components/Learning/Learning";
 import { FollowMe } from "../components/OnlinePresence/FollowMe";
 import { Projects } from "../components/Projects/Projects";
 import { School } from "../components/School/School";
 import { SolutionSuite } from "../components/Solutions/SolutionSuite";
 import { MyStacks } from "../components/Stacks/MyStacks";
+import { WhoAmI } from "../components/WhoAmI/WhoAmI";
+import { academicAchievementsData } from "../data/achievementsData";
 
 export const Home = () => {
   return (
@@ -40,8 +43,15 @@ export const Home = () => {
 
         {/* Profile Image - Small */}
         <div className="col-span-5 row-span-12 grid grid-cols-5 grid-rows-12 gap-4">
-          <div className="col-span-4 row-span-5 bento">
-            <School />
+          <div className="col-span-3 row-span-8 bento">
+            <AcademicAchievements
+              achievements={academicAchievementsData}
+              speed={0.1}
+              pauseOnHover={false}
+            />
+          </div>
+          <div className="col-span-2 row-span-6 bento">
+            <WhoAmI />
           </div>
         </div>
       </div>
