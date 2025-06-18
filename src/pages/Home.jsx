@@ -12,7 +12,7 @@ import { academicAchievementsData } from "../data/achievementsData";
 export const Home = () => {
   return (
     <div className="min-h-screen w-full bg-zinc-950">
-      <div className="h-screen w-full grid grid-cols-12 grid-rows-12 gap-5 p-10">
+      <div className="min-h-screen h-fit w-full grid grid-cols-12 grid-rows-12 gap-5 p-10">
         {/* Hero Section - Large */}
         <div className="col-span-3 row-span-12 grid grid-cols-3 grid-rows-12 gap-4">
           <div className="first-col bento">
@@ -43,14 +43,14 @@ export const Home = () => {
 
         {/* Profile Image - Small */}
         <div className="col-span-5 row-span-12 grid grid-cols-5 grid-rows-12 gap-4">
-          <div className="col-span-3 row-span-7 bento">
+          <div className="col-span-3 row-span-7 bento max-h-[490px]">
             <AcademicAchievements
               achievements={academicAchievementsData}
               speed={0.1}
               pauseOnHover={false}
             />
           </div>
-          <div className="col-span-2 row-span-6 bento">
+          <div className="col-span-2 row-span-7 bento">
             <WhoAmI />
           </div>
           <div className="col-span-5 row-span-5 bento">
