@@ -6,7 +6,7 @@ import "./myStacks.css";
 
 export const MyStacks = () => {
   return (
-    <div className="flex flex-col w-full h-full items-center text-center p-2 md:py-5 md:px-8 gap-4 md:gap-0">
+    <div className="flex flex-col w-full h-full items-center text-center p-4 pt-4 md:py-5 md:px-8 gap-4 md:gap-0">
       <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
           <HiSquare2Stack className="h-5 w-5 text-rose-300/90" />

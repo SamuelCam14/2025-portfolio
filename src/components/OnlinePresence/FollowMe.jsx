@@ -32,7 +32,7 @@ const socialLinks = [
 
 export const FollowMe = () => {
   return (
-    <div className="flex flex-col w-full h-full items-center text-center py-5 px-8">
+    <div className="flex flex-col w-full h-full items-center text-center p-4 pt-4 md:py-5 md:px-8 gap-4 md:gap-0">
       <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
           <TbUserFilled className="h-5 w-5 text-rose-300/90" />
@@ -53,7 +53,7 @@ export const FollowMe = () => {
                 rel="noopener noreferrer"
                 className="stacks-card text-zinc-400 font-normal hover:scale-105 transition-transform duration-200"
               >
-                <div className="icon-container p-2.5">{link.icon}</div>
+                <div className="icon-container p-2 md:p-2.5">{link.icon}</div>
                 {link.name}
               </a>
             </li>

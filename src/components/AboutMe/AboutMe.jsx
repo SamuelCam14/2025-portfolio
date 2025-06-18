@@ -32,7 +32,7 @@ const info = [
 
 export const AboutMe = () => {
   return (
-    <section className="flex flex-col w-full h-full px-2 py-2 md:px-5 justify-center gap-2 md:gap-6">
+    <section className="flex flex-col w-full h-full px-4 py-4 md:px-5 justify-center gap-4 md:gap-6">
       {/* Name Section */}
       <div className="flex justify-between">
         <div className="flex items-center gap-4">
@@ -98,7 +98,12 @@ export const AboutMe = () => {
 
       {/* CTA Buttons */}
       <div className="flex gap-2 w-full">
-        <a href="#" className="cta-btn">
+        <a
+          href="https://github.com/SamuelCam14"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-btn"
+        >
           <TbBrandGithub className="text-rose-300/90 h-5 w-5" />
           <ShinyText
             text="My GitHub"
@@ -107,7 +112,12 @@ export const AboutMe = () => {
             className="font-medium"
           />
         </a>
-        <a href="#" className="cta-btn">
+        <a
+          href="https://wa.me/526141703213?text=Hola%20Samuel%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte%20para%20trabajar%20contigo."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-btn"
+        >
           <TbBrandWhatsapp className="text-rose-300/90 h-5 w-5" />
           <ShinyText
             text="My WhatsApp"

@@ -50,24 +50,26 @@ export const WorkTogether = () => {
   };
 
   return (
-    <section className="flex items-center h-full px-8 py-5 gap-8">
+    <section className="flex flex-col md:flex-row items-center h-full p-4 md:px-8 md:py-5 gap-4 md:gap-8">
       <div className="flex-1 flex flex-col items-center justify-center text-center gap-2">
-        <div className="bg-zinc-800/30 p-4 rounded-xl">
-          <TbCrown className="text-5xl text-rose-300/90" />
+        <div className="bg-zinc-800/30 p-3 md:p-4 rounded-xl">
+          <TbCrown className="text-4xl md:text-5xl text-rose-300/90" />
         </div>
-        <h2 className="text-2xl font-semibold text-zinc-200">
+        <h2 className="text-xl md:text-2xl font-semibold text-zinc-200">
           Let's Work Together
         </h2>
-        <p className="text-zinc-400">Ready to turn ideas into reality?</p>
+        <p className="text-zinc-400 text-sm md:text-base">
+          Ready to turn ideas into reality?
+        </p>
       </div>
 
-      <div className="flex-1">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-3">
+      <div className="flex-1 w-full">
+        <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+          <div className="space-y-2 md:space-y-3">
             {/* Name Input */}
             <div className="relative">
-              <div className="absolute left-3 top-3.5 text-zinc-400">
-                <TbUser className="h-5 w-5" />
+              <div className="absolute left-3 top-3 md:top-3.5 text-zinc-400">
+                <TbUser className="h-4 w-4 md:h-5 md:w-5" />
               </div>
               <input
                 type="text"
@@ -76,14 +78,14 @@ export const WorkTogether = () => {
                 onChange={handleInputChange}
                 placeholder="Your name"
                 required
-                className="w-full pl-12 pr-4 py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200"
+                className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200 text-sm md:text-base"
               />
             </div>
 
             {/* Email Input */}
             <div className="relative">
-              <div className="absolute left-3 top-3.5 text-zinc-400">
-                <TbMail className="h-5 w-5" />
+              <div className="absolute left-3 top-3 md:top-3.5 text-zinc-400">
+                <TbMail className="h-4 w-4 md:h-5 md:w-5" />
               </div>
               <input
                 type="email"
@@ -92,23 +94,23 @@ export const WorkTogether = () => {
                 onChange={handleInputChange}
                 placeholder="your.email@example.com"
                 required
-                className="w-full pl-12 pr-4 py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200"
+                className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200 text-sm md:text-base"
               />
             </div>
 
             {/* Message Textarea */}
             <div className="relative">
-              <div className="absolute left-3 top-3.5 text-zinc-400">
-                <TbMessage className="h-5 w-5" />
+              <div className="absolute left-3 top-3 md:top-3.5 text-zinc-400">
+                <TbMessage className="h-4 w-4 md:h-5 md:w-5" />
               </div>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder="Share your thoughts and project ideas..."
-                rows="4"
+                rows="3"
                 required
-                className="w-full pl-12 pr-4 py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200 resize-none"
+                className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 bg-zinc-800/40 border border-zinc-800/80 rounded-xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-rose-300/50 focus:bg-zinc-800/60 transition-all duration-200 resize-none text-sm md:text-base"
               />
             </div>
           </div>
@@ -117,7 +119,7 @@ export const WorkTogether = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:scale-102 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+            className="w-full flex items-center justify-center gap-2 bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium py-2.5 md:py-3 px-4 rounded-xl transition-all duration-200 hover:scale-102 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 text-sm md:text-base"
           >
             {isSubmitting ? (
               <>
@@ -126,7 +128,7 @@ export const WorkTogether = () => {
               </>
             ) : (
               <>
-                <TbSend className="h-5 w-5" />
+                <TbSend className="h-4 w-4 md:h-5 md:w-5" />
                 Send Message
               </>
             )}

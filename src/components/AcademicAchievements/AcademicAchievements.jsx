@@ -98,7 +98,7 @@ const AcademicAchievements = ({
   return (
     <div
       ref={containerRef}
-      className="pt-5 px-8 pb-0 relative overflow-hidden flex flex-col h-full w-full"
+      className="pt-4 px-4 pb-0 md:pt-5 md:px-8 relative overflow-hidden flex flex-col h-full w-full"
       onMouseEnter={pauseOnHover ? () => setIsHovered(true) : null}
       onMouseLeave={pauseOnHover ? () => setIsHovered(false) : null}
     >
@@ -107,7 +107,7 @@ const AcademicAchievements = ({
           <TbSchool className="h-5 w-5 text-rose-300/90" />
           <h2 className="text-zinc-400">Academic</h2>
         </div>
-        <p className="text-zinc-200 font-medium text-xl mt-1 mb-5 text-center">
+        <p className="text-zinc-200 font-medium text-xl mt-1 mb-4 md:mb-5 text-center">
           My Achievements
         </p>
       </div>
@@ -118,15 +118,15 @@ const AcademicAchievements = ({
           {loopedAchievements.map((achievement, index) => (
             <div
               key={`${achievement.id}-${index}`}
-              className="relative mb-8 flex items-start"
+              className="relative mb-6 md:mb-8 flex items-start"
             >
               <div className="absolute left-2.5 top-0 h-full w-0.5 bg-zinc-700/80"></div>
               <div className="absolute left-1 top-0 w-3.5 h-3.5 rounded-full bg-zinc-500 z-10 flex items-center justify-center">
                 <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
               </div>
 
-              <div className="ml-10 bg-zinc-800/40 border border-zinc-800/80 rounded-2xl p-4 w-[calc(100%-40px)] flex flex-col justify-between transition-all duration-300 ease-in-out">
-                <h3 className="text-xl font-semibold text-white mb-1">
+              <div className="ml-8 md:ml-10 bg-zinc-800/40 border border-zinc-800/80 rounded-2xl p-3 md:p-4 w-[calc(100%-32px)] md:w-[calc(100%-40px)] flex flex-col justify-between transition-all duration-300 ease-in-out">
+                <h3 className="text-lg md:text-xl font-semibold text-white mb-1">
                   {achievement.title}
                 </h3>
                 <p className="text-zinc-300 text-sm mb-2">

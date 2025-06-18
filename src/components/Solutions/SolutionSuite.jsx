@@ -45,7 +45,7 @@ export const SolutionSuite = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full h-full items-center text-center py-2 md:py-5 px-0 gap-4 md:gap-0">
+    <div className="flex flex-col w-full h-full items-center text-center pt-4 pb-4 md:py-5 px-0 gap-4 md:gap-0">
       <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
           <TbIconsFilled className="h-5 w-5 text-rose-300/90" />
@@ -56,7 +56,7 @@ export const SolutionSuite = () => {
         </p>
       </div>
 
-      <div className="h-full w-full flex flex-col items-center justify-center">
+      <div className="h-full w-full flex flex-col items-center justify-center mb-4">
         {/* First scroll - opposite direction */}
         <div className="w-full inline-flex flex-nowrap overflow-hidden mb-3">
           <ul
