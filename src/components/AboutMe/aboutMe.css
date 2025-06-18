@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 @utility cta-btn {
-    @apply flex items-center gap-2 bg-zinc-800/50 py-4 rounded-xl flex-1 justify-center border-1 border-zinc-800/50 hover:bg-zinc-800/80 hover:scale-102 transition-all duration-200;
+    @apply flex items-center gap-2 bg-zinc-800/50 py-4 rounded-2xl flex-1 justify-center border-1 border-zinc-800/50 hover:bg-zinc-800/80 hover:scale-102 transition-all duration-200;
 }
