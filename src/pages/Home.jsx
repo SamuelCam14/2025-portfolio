@@ -1,63 +1,44 @@
-import { AboutMe } from "../components/AboutMe/AboutMe";
-import AcademicAchievements from "../components/AcademicAchievements/AcademicAchievements";
-import { Learning } from "../components/Learning/Learning";
-import { FollowMe } from "../components/OnlinePresence/FollowMe";
-import { Projects } from "../components/Projects/Projects";
-import { SolutionSuite } from "../components/Solutions/SolutionSuite";
-import { MyStacks } from "../components/Stacks/MyStacks";
-import { WhoAmI } from "../components/WhoAmI/WhoAmI";
-import { WorkTogether } from "../components/WorkTogether/WorkTogether";
-import { academicAchievementsData } from "../data/achievementsData";
+import { useState, useEffect } from "react";
+import { HomeResMobile } from "./HomeRes/HomeResMobile";
+import { HomeResTable } from "./HomeRes/HomeResTablet";
+import { Home as HomeResDesktop } from "./HomeRes/HomeResDesktop";
 
 export const Home = () => {
-  return (
-    <div className="min-h-screen w-full bg-zinc-950">
-      <div className="min-h-screen h-fit w-full grid grid-cols-12 grid-rows-12 gap-5 p-10">
-        {/* Hero Section - Large */}
-        <div className="col-span-3 row-span-12 grid grid-cols-3 grid-rows-12 gap-4">
-          <div className="first-col bento">
-            <MyStacks />
-          </div>
-          <div className="first-col bento">
-            <Projects />
-          </div>
-          <div className="first-col bento">
-            <SolutionSuite />
-          </div>
-        </div>
+  const [screenSize, setScreenSize] = useState("");
 
-        {/* Skills - Medium */}
-        <div className="col-span-4 row-span-12 grid grid-cols-3 grid-rows-11 gap-4">
-          <div className="col-span-3 row-span-5 bento">
-            <AboutMe />
-          </div>
-          <div className="col-span-3 row-span-6 grid grid-cols-4 grid-rows-1 gap-4">
-            <div className="col-span-2 grid-rows-1 bento">
-              <FollowMe />
-            </div>
-            <div className="col-span-2 grid-rows-1 bento">
-              <Learning />
-            </div>
-          </div>
-        </div>
+  useEffect(() => {
+    const detectScreenSize = () => {
+      const width = window.innerWidth;
 
-        {/* Profile Image - Small */}
-        <div className="col-span-5 row-span-12 grid grid-cols-5 grid-rows-12 gap-4">
-          <div className="col-span-3 row-span-7 bento max-h-[490px]">
-            <AcademicAchievements
-              achievements={academicAchievementsData}
-              speed={0.1}
-              pauseOnHover={false}
-            />
-          </div>
-          <div className="col-span-2 row-span-7 bento">
-            <WhoAmI />
-          </div>
-          <div className="col-span-5 row-span-5 bento">
-            <WorkTogether />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+      if (width < 820) {
+        setScreenSize("sm"); // Mobile
+      } else if (width >= 820 && width < 1536) {
+        setScreenSize("md"); // Tablet
+      } else {
+        setScreenSize("xl"); // Desktop grande/monitores externos
+      }
+    };
+
+    detectScreenSize();
+
+    window.addEventListener("resize", detectScreenSize);
+
+    return () => window.removeEventListener("resize", detectScreenSize);
+  }, []);
+
+  // Renderizar componente según el tamaño de pantalla
+  const renderResponsiveComponent = () => {
+    switch (screenSize) {
+      case "sm":
+        return <HomeResMobile />;
+      case "md":
+        return <HomeResTable />;
+      case "xl":
+        return <HomeResDesktop />; // Monitores grandes
+      default:
+        return <HomeResMobile />; // Fallback
+    }
+  };
+
+  return <div>{renderResponsiveComponent()}</div>;
 };
