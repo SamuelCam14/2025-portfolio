@@ -18,7 +18,7 @@ export const HomeResMobile = () => {
         </div>
 
         {/* Hero Section - Large */}
-        <div className="col-span-1 grid grid-cols-3 grid-rows-12 gap-4">
+        <div className="col-span-1 grid grid-cols-3 gap-4">
           <div className="first-col bento">
             <MyStacks />
           </div>
