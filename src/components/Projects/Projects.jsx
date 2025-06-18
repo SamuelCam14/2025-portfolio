@@ -45,7 +45,7 @@ export const Projects = () => {
         </ul>
       </div>
       <div className="bg-zinc-800 rounded-2xl p-1 md:p-1.5 absolute bottom-2 md:bottom-5">
-        <button className="bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium px-12 py-2 md:px-12 md:py-3 rounded-xl">
+        <button className="bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium px-12 py-2 md:px-12 md:py-3 rounded-xl text-sm md:text-base">
           View Works
         </button>
       </div>
