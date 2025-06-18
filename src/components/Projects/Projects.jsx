@@ -19,7 +19,7 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full h-full items-center text-center py-2 md:py-5 px-0 relative">
+    <div className="flex flex-col w-full h-full items-center text-center py-2 md:py-5 px-0 gap-3 md:gap-0 relative">
       <div className="h-fit mb-2 md:mb-8">
         <div className="flex gap-1 items-center justify-center">
           <TbBriefcaseFilled className="h-5 w-5 text-rose-300/90" />

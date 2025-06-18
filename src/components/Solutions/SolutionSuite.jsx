@@ -45,7 +45,7 @@ export const SolutionSuite = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full h-full items-center text-center py-5 px-0">
+    <div className="flex flex-col w-full h-full items-center text-center py-2 md:py-5 px-0 gap-4 md:gap-0">
       <div className="h-fit">
         <div className="flex gap-1 items-center justify-center">
           <TbIconsFilled className="h-5 w-5 text-rose-300/90" />
