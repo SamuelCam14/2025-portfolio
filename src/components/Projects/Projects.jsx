@@ -1,5 +1,6 @@
 import { TbBriefcaseFilled } from "react-icons/tb";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   { name: "Dream High", image: "/images/dreamhigh.png" },
@@ -9,6 +10,7 @@ const projects = [
 
 export const Projects = () => {
   const logosRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ul = logosRef.current;
@@ -45,7 +47,10 @@ export const Projects = () => {
         </ul>
       </div>
       <div className="bg-zinc-800 rounded-2xl p-1 md:p-1.5 absolute bottom-2 md:bottom-5">
-        <button className="bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium px-12 py-2 md:px-12 md:py-3 rounded-xl text-sm md:text-base">
+        <button
+          className="cursor-pointer bg-rose-300/90 hover:bg-rose-300 text-zinc-800 font-medium px-12 py-2 md:px-12 md:py-3 rounded-xl text-sm md:text-base"
+          onClick={() => navigate("/projects")}
+        >
           View Works
         </button>
       </div>
